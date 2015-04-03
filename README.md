@@ -2,6 +2,10 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
+Heroku approved app name: cheryltroup-bloccit
+
+https://cheryltroup-bloccit.herokuapp.com/
+
 
 == README
 
