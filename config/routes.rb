@@ -3,7 +3,7 @@ get 'welcome/index'
 
 get 'welcome/about'
 
-get 'contact page'
+get 'contact/index'
 
 root to: 'welcome#index'
 end
