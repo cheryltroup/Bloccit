@@ -9,6 +9,8 @@ require 'faker'
 end
 posts = Post.all 
 
+Post.create!(title: 'My Test post title', body: 'My Test post body')
+
 #Create Comments
 100.times do 
 	Comment.create!(
@@ -16,6 +18,8 @@ posts = Post.all
 		body: Faker::Lorem.paragraph
 		)
 end
+
+Comment.create!(post: posts.sample, body: 'My Test comment body')
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
