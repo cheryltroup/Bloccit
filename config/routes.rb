@@ -1,8 +1,9 @@
-Bloccit::Application.routes.draw do
- 
-resources :posts
+Bloccit::Application.routes.draw do 
 
-get 'contact/index'
+resources :posts
+resources :advertisements
+
+#get 'contact/index'
 get 'about' => 'welcome#about'
 
 root to: 'welcome#index'
