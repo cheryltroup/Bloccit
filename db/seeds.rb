@@ -29,5 +29,5 @@ end
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
-puts "#{Advertisement.count}" adviertisements created"
+puts "#{Advertisement.count} advertisements created"
 	
