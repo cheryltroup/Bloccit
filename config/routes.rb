@@ -1,6 +1,7 @@
 Bloccit::Application.routes.draw do
  
-resources :posts
+  devise_for :users
+  resources :posts
 
 get 'contact/index'
 get 'about' => 'welcome#about'
