@@ -11,8 +11,9 @@ class ApplicationController < ActionController::Base
           devise_parameter_sanitizer.for(:sign_up) << :name
       end
 
-      def flash_attack
-      	flash[:notice] = "It's a FLASH ATTACK"
-        render :new
-      end
+  before_action :flash_attack
+  def flash_attack
+    flash[:notice] = "It's a FLASH ATTACK"  
+  end
+
 end
