@@ -12,3 +12,9 @@
 SENDGRID_PASSWORD: ctutlz5b
 SENDGRID_USERNAME: app35501721@heroku.com
 SECRET_KEY_BASE: 2bcac953c8f547e75edb1aee46f7e0583d6b9d86a1b3ec52a349a68b52c2cd14e266d4af44c50402e1cf53bc1e8f50f637e96c66faaeff8dc06490046229775a
+AWS_ACCESS_KEY_ID: AKIAI6LWBSW3SWG7MGIA
+AWS_SECRET_ACCESS_KEY: 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
+development:
+  AWS_BUCKET: cheryltroup-bloccit-developement
+production:
+  AWS_BUCKET: cheryltroup-bloccit-production

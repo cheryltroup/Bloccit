@@ -60,3 +60,7 @@ gem 'devise'
 gem 'figaro', '1.0'
 gem 'pundit'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
