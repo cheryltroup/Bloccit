@@ -21,3 +21,6 @@
 
 # CarrierWave image
 public/uploads
+
+# Secret yml
+/secrets.yml
