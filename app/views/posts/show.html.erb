@@ -1,5 +1,5 @@
 <h1><%= markdown_to_html @post.title %>
-    <%= image_tag(@post.image.thumb.url) if @post.image? %>
+    <%= image_tag(@post.image.tiny.url) if @post.image? %>
 </h1>
 
 <div class="row">
