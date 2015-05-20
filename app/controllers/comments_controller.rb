@@ -1,14 +1,14 @@
 class CommentsController < ApplicationController
 
   def create
-    #@topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:post_id])
-    @comment = current_user.comment.new(comment_params)
-    @comment.userid = current_user.id
+    @comment = current_user.comments.build(comment_params)
+    @comment.post = @post
+    
     if @comment.save
-  	 redirect_to [@topic, @post], notice: "Comment saved successfully."
+  	 redirect_to [@post.topic, @post], notice: "Comment saved successfully."
     else
-      redirect_to [@topic, @post] notice: "Error creating a comment. Please try again."
+      redirect_to [@post.topic, @post], notice: "Error creating a comment. Please try again."
     end
   end
 

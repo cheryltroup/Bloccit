@@ -1,10 +1,10 @@
-  <h4>Add a comment:</h4>
-  <%= form_for [topic, post, comment] do |f| %>
-    <%= f.label "Do you have something to say?" %>
-    <%= f.text_area :body, rows: 4, class: 'form-control', placeholder: "Add a comment here" %>
-    <% end %>
+  
+  <%= form_for [post, post.comments.new] do |f| %>
+ 
+  <%= f.text_area :body, rows: 4, class: 'form-control', placeholder: "Add a comment here" %>
 
     <div class="form-group">
     <%= f.submit "Save", class: 'btn btn-success'%>
-   </div%>
+   </div>
+   <% end %>
 
