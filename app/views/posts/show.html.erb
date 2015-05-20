@@ -24,7 +24,7 @@
     <h4>Comments</h4>
     <%= render @post.comments %>
   </div>
-    <% if policy(Comment.new).create? %>   
+    <% if policy(@comment).create? %>   
     <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
     <% end %>  
 </div>
