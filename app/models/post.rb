@@ -33,8 +33,8 @@ class Post < ActiveRecord::Base
   	user.votes.create(value: 1, post: self)
   end
 
+	default_scope { order('rank DESC') }
 
-	default_scope { order('created_at DESC') }
 
 	validates :title, length: { minimum: 5 }, presence: true
   validates :body, length: { minimum: 20 }, presence: true
