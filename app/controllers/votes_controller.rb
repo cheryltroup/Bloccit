@@ -20,6 +20,7 @@
     
 
   def down_vote
+
     @post = Post.find(params[:post_id])
 
     @vote = @post.votes.where(user_id: current_user.id).first
@@ -32,8 +33,8 @@
 
     # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
+ end
 
-  end
 
   private
 
