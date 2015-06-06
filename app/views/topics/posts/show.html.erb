@@ -40,7 +40,7 @@
     <h4>Comments</h4>
      <%= render partial: 'comments/comment', collection: @comments %>
   </div>
-    <% if policy(@comment).create? %>   
-    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+    <% if policy(Comment.new).create? %>   
+      <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @post.comments.build } %>
     <% end %>  
 </div>

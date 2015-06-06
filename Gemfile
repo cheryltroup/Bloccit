@@ -16,6 +16,7 @@ group :production do
    gem 'better_errors'
    gem 'rspec-rails', '~> 3.0'
    gem 'capybara'
+   gem 'factory_girl_rails', '~> 4.0'
  end
 
  
