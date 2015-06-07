@@ -8,31 +8,38 @@
        <% end %>
        <div class="media-body">
          <h2 class="media-heading"><%= @user.name %></h2>
-         <div class="row">
+          <small>
+           <%= pluralize(@user.posts.count, 'post') %>,
+           <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
+         </small>
+         </small>
+       </div>
+     </div>
+   </div>
+ </div>
 
-         <div class="tabbable tabs-left">
-               <ul class="nav nav-tabs">
-       <li class="active"><a href="#posts" data-toggle="tab">Posts</a></li>
-       <li><a href="#comments" data-toggle="tab">Comments</a></li>
+<div class="row">
+  <div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+    <li class="active"><a href="#posts" data-toggle="tab">Posts</a></li>
+    <li><a href="#comments" data-toggle="tab">Comments</a></li>   
+    </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="posts">
+        <%= render @posts %>
+    </div>
+
+    <div class="tab-pane" id="comments">
+        <%= render @comments %>
+    </div>
+  </div>
+  </div>
+</div>
        
-     </ul>
-     <div class="tab-content">
-       <div class="tab-pane active" id="posts">
-         <%= render @posts %>
-       </div>
-       <div class="tab-pane" id="comments">
-         <%= render @comments %>
-       </div>
-     </div>
-   </div>
- </div>
-       </div>
-     </div>
-   </div>
- </div>
  
-   <h2>Posts</h2>
-   <%= render @posts %>
+<h2>Posts</h2>
+<%= render @posts %>
  
- <h2>Comments</h2>
- <%= render @comments %>
+<h2>Comments</h2>
+<%= render @comments %>
