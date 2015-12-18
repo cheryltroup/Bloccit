@@ -10,9 +10,6 @@ class VotesController < ApplicationController
     else
     @vote = current_user.votes.create(value: 1, post: @post)
     end
-
-    # http://apidock.com/rails/ActionController/Base/redirect_to
-    #update_vote!(1)
     redirect_to :back
   end
     
@@ -26,12 +23,8 @@ class VotesController < ApplicationController
     else
       @vote = current_user.votes.create(value: -1, post: @post)
     end
-
-    # http://apidock.com/rails/ActionController/Base/redirect_to
-    #update_vote!(-1)
     redirect_to :back
  end
-
 
   private
 
